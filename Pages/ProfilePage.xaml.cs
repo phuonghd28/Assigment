@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -44,6 +45,7 @@ namespace App1.Pages
             }
             else
             {
+                avatar.ImageSource = new BitmapImage(new Uri(account.avatar));
                 email.Text = account.email;
                 fullName.Text = $"{account.firstName} {account.lastName}";
                 address.Text = account.address;

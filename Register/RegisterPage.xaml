@@ -8,35 +8,52 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="170,74,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="150"/>
-        <TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="366,74,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Margin="170,47,0,0" Text="Firstname" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="368,45,0,0" Text="Lastname" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="email" HorizontalAlignment="Left" Margin="170,145,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="348"/>
-        <TextBlock HorizontalAlignment="Left" Margin="171,123,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="170,175,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="170,200,0,0" VerticalAlignment="Top" Width="348"/>
-        <TextBox x:Name="address" HorizontalAlignment="Left" Margin="170,260,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="348"/>
-        <TextBlock HorizontalAlignment="Left" Margin="170,235,0,0" Text="Address" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="avatar" HorizontalAlignment="Left" Margin="170,378,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="348"/>
-        <TextBox x:Name="phone" HorizontalAlignment="Left" Margin="170,320,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.569" Width="348"/>
-        <TextBlock HorizontalAlignment="Left" Margin="172,297,0,0" Text="Phone" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="171,358,0,0" Text="Avatar" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <RadioButton Content="Male" Margin="170,422,0,0" VerticalAlignment="Top" GroupName="gender" Width="73" Checked="HandleCheck"/>
-        <RadioButton Content="Fermale" Margin="270,422,0,0" VerticalAlignment="Top" GroupName="gender" Checked="HandleCheck"/>
-        <RadioButton Content="Other" Margin="370,422,0,0" VerticalAlignment="Top" GroupName="gender" Checked="HandleCheck"/>
-        <Button Content="Register" Margin="202,610,0,0" Width="120" Click="Button_Click" VerticalAlignment="Top"/>
+    <RelativePanel>
+        <RelativePanel.Background>
+            <ImageBrush ImageSource="https://ak.picdn.net/shutterstock/videos/1069087117/thumb/1.jpg?ip=x480"></ImageBrush>
+        </RelativePanel.Background>
+        <ScrollViewer Height="966" Width="1886">
+            <StackPanel Width="1208" Height="689">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF2E75BE" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Grid>
+                    <Image Source="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png" Margin="369,16,732,633" RenderTransformOrigin="-0.018,0.36" />
+                    <TextBox Header="firstName" x:Name="firstName" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="150" Margin="121,127,0,0"/>
+                    <TextBox Header="lastName" x:Name="lastName" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="150" Margin="332,127,0,0"/>
 
-        <TextBox x:Name="content" HorizontalAlignment="Left" Margin="170,535,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.515,0.615" Width="348" Header="Introduction"/>
-        <CalendarDatePicker x:Name="birthday" Margin="171,469,0,0" Width="348" Header="Birthday" VerticalAlignment="Top" DateChanged="birthday_DateChanged"/>
-        <TextBlock x:Name="checkFirstName" HorizontalAlignment="Left" Height="17" Margin="172,109,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red"/>
-        <TextBlock x:Name="checkLastName" HorizontalAlignment="Left" Height="17" Margin="370,111,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red"/>
-        <TextBlock x:Name="checkEmail" HorizontalAlignment="Left" Height="17" Margin="547,151,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red" />
-        <TextBlock x:Name="checkPassword" HorizontalAlignment="Left" Height="17" Margin="547,206,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red" />
-        <TextBlock x:Name="checkAddress" HorizontalAlignment="Left" Height="17" Margin="547,266,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red" />
-        <TextBlock x:Name="checkPhone" HorizontalAlignment="Left" Height="17" Margin="547,326,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red"/>
-        <Button Content="Login" Margin="362,610,0,0" Width="120" Click="Handle_Login" VerticalAlignment="Top"/>
+                    <TextBox Header="email" x:Name="email" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="252" Margin="121,198,0,0"/>
 
-    </Grid>
+                    <PasswordBox Header="password" x:Name="password" HorizontalAlignment="Left" VerticalAlignment="Top" Width="252" Margin="121,272,0,0"/>
+                    <TextBox Header="address" x:Name="address" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="355" Margin="121,345,0,0"/>
+
+                    <TextBox Header="avatar" x:Name="avatar" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="348" Margin="407,272,0,0"/>
+                    <TextBox Header="phone" x:Name="phone" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.569" Width="177" Margin="399,198,0,0"/>
+
+                    <RadioButton Content="Male" VerticalAlignment="Top" GroupName="gender" Width="73" Checked="HandleCheck"/>
+                    <RadioButton Content="Fermale" VerticalAlignment="Top" GroupName="gender" Checked="HandleCheck"/>
+                    <RadioButton Content="Other" VerticalAlignment="Top" GroupName="gender" Checked="HandleCheck"/>
+                    <Button Content="Register" Width="120" Click="Button_Click" VerticalAlignment="Top" Margin="238,489,0,0"/>
+
+                    <TextBox x:Name="content" HorizontalAlignment="Left" Margin="124,416,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.515,0.615" Width="626" Header="Introduction"/>
+                    <CalendarDatePicker x:Name="birthday" Width="237" Header="Birthday" VerticalAlignment="Top" DateChanged="birthday_DateChanged" Margin="513,127,0,0"/>
+                    <TextBlock x:Name="checkFirstName" HorizontalAlignment="Left" Height="17" Margin="122,188,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red"/>
+                    <TextBlock x:Name="checkLastName" HorizontalAlignment="Left" Height="17" Margin="334,188,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red"/>
+                    <TextBlock x:Name="checkEmail" HorizontalAlignment="Left" Height="17" Margin="124,257,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red" />
+                    <TextBlock x:Name="checkPassword" HorizontalAlignment="Left" Height="17" Margin="124,330,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red" />
+                    <TextBlock x:Name="checkAddress" HorizontalAlignment="Left" Height="17" Margin="120,402,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red" />
+                    <TextBlock x:Name="checkPhone" HorizontalAlignment="Left" Height="17" Margin="407,256,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red"/>
+                    <Button Content="Login" Width="120" Click="Handle_Login" VerticalAlignment="Top" Margin="487,489,0,0"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </RelativePanel>
+
+    <!--<Grid>
+         
+
+    </Grid> -->
 </Page>

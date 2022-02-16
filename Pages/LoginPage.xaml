@@ -8,12 +8,31 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBox x:Name="email" HorizontalAlignment="Left" Margin="564,236,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="321" Header="Email"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="565,337,0,0" VerticalAlignment="Top" Width="320" Header="Password"/>
-        <Button Content="Login" Margin="608,438,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.388,-0.682" Width="92" Click="Handle_Login"/>
-        <Button Content="Register" Margin="750,438,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.388,-0.682" Width="92" Click="Handle_Register"/>
-        <TextBlock x:Name="checkEmail" HorizontalAlignment="Left" Margin="564,305,0,0" Text="Email is required" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Collapsed" Foreground="Red"/>
-        <TextBlock x:Name="checkPassword" HorizontalAlignment="Left" Margin="564,401,0,0" Text="Password is required" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Collapsed" Foreground="Red"/>
-    </Grid>
+
+    <RelativePanel>
+
+        <RelativePanel.Background>
+            <ImageBrush ImageSource="https://ak.picdn.net/shutterstock/videos/1069087117/thumb/1.jpg?ip=x480"></ImageBrush>
+        </RelativePanel.Background>
+        <ScrollViewer Height="789" Width="1541">
+            <StackPanel Width="513" Height="618">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF2E75BE" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Grid>
+                    <Image Source="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png" Margin="190,24,191,306" RenderTransformOrigin="0.509,0.477" />
+                    <TextBox x:Name="email" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="321" Header="Email" Margin="93,223,0,0"/>
+                    <PasswordBox x:Name="password" HorizontalAlignment="Center" VerticalAlignment="Top" Width="320" Header="Password" Margin="0,313,0,0"/>
+                    <Button Content="Login"  VerticalAlignment="Top" RenderTransformOrigin="0.388,-0.682" Width="226" Click="Handle_Login" Margin="0,427,0,0" HorizontalAlignment="Center"/>
+                    <Button Content="Register"  VerticalAlignment="Top" RenderTransformOrigin="0.388,-0.682" Width="226" Click="Handle_Register" Margin="0,500,0,0" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="checkEmail" HorizontalAlignment="Left"  Text="Email is required" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Collapsed" Foreground="Red" Margin="98,288,0,0"/>
+                    <TextBlock x:Name="checkPassword" HorizontalAlignment="Left"  Text="Password is required" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Collapsed" Foreground="Red" Margin="99,376,0,0"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </RelativePanel>
+
 </Page>
